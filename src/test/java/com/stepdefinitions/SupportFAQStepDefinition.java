@@ -81,5 +81,6 @@ public class SupportFAQStepDefinition {
     public void validate_the_ask_support_page_is_being_displayed() {
         assertThat("Home page url didn't displayed",supportPage.getPageTitle(),
                 is(FileReaderLibrary.getInstance().getConfigReader().getApplicationUrl() + "/requests/new"));
+        testContext.getWebDriverLibrary().getDriver().quit();
     }
 }
